@@ -12,7 +12,7 @@ $product->setTitle("Sneakers");
 $product->setProperty("Size", "XXL");
 $product->setProperty("Color", "White");
 
-$text = "Information about product:\n";
+$text = "Product information:\n";
 $text .="Title: " . $product->getTitle() . PHP_EOL;
 $text .="Size: " . $product->getProperty("Size") . PHP_EOL;
 $text .="Color: " . $product->getProperty("Color") . PHP_EOL;
