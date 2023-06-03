@@ -15,18 +15,18 @@ interface Car
     /**
      * Цвет автомобиля
      *
-     * @return mixed
+     * @return string
      *
      */
-    public function getColor();
+    public function getColor(): string;
 
 
     /**
      * Название комплектации
      *
-     * @return mixed
+     * @return string
      *
      */
-    public function getOption();
+    public function getOption(): string;
 
 }

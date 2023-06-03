@@ -15,21 +15,13 @@ class ToyotaFactory
      */
     public function make(string $model, string $color, string $option): Car
     {
-        switch ($model) {
-            case 'Camry':
-                $car = new ToyotaCar('Camry', $color, $option);
-                break;
-            case 'Corolla':
-                $car = new ToyotaCar('Corolla', $color, $option);
-                break;
-            case 'Hilux':
-                $car = new ToyotaCar('Hilux', $color, $option);
-                break;
-            default:
-                throw new \Exception('invalid car model');
-        }
+        return match ($model) {
+            'Camry' => new ToyotaCar('Camry', $color, $option),
+            'Corolla' => new ToyotaCar('Corolla', $color, $option),
+            'Hilux' => new ToyotaCar('Hilux', $color, $option),
+            default => throw new \Exception('invalid car model'),
+        };
 
-        return $car;
     }
 
 }

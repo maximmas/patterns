@@ -15,21 +15,12 @@ class SkodaFactory
      */
     public function make(string $model, string $color, string $option): Car
     {
-        switch ($model) {
-            case 'Octavia':
-                $car = new SkodaCar('Oktavia', $color, $option);
-                break;
-            case 'Rapid':
-                $car = new SkodaCar('Rapid', $color, $option);
-                break;
-            case 'Kodiaq':
-                $car = new SkodaCar('Kodiaq', $color, $option);
-                break;
-            default:
-                throw new \Exception('invalid car model');
-        }
-
-        return $car;
+        return match ($model) {
+            'Octavia' => new SkodaCar('Octavia', $color, $option),
+            'Rapid' => new SkodaCar('Rapid', $color, $option),
+            'Kodiaq' => new SkodaCar('Kodiaq', $color, $option),
+            default => throw new \Exception('invalid car model'),
+        };
     }
 
 }
