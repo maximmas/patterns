@@ -1,6 +1,6 @@
 <?php
 
-class ToyotaFactory
+class ToyotaFactory implements Factory
 {
 
     /**

@@ -1,0 +1,17 @@
+{
+    "name": "maxim/patterns",
+    "description": "Design patterns examples",
+    "autoload": {
+        "psr-4": {
+            "Maxim\\Patterns\\": "src/",
+            "Maxim\\Patterns\\FactoryMethod\\": "src/FactoryMethod"
+        }
+    },
+    "authors": [
+        {
+            "name": "Maxim Maslov",
+            "email": "maxim.maslov.kd@gmail.com"
+        }
+    ],
+    "require": {}
+}

@@ -1,6 +1,6 @@
 <?php
 
-class SkodaFactory
+class SkodaFactory implements Factory
 {
 
     /**
