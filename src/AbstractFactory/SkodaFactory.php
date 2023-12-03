@@ -1,8 +1,8 @@
 <?php
 
-namespace Patterns\SimpleFactory;
+namespace Patterns\AbstractFactory;
 
-class SkodaFactory
+class SkodaFactory extends Factory
 {
 
     /**
@@ -15,13 +15,21 @@ class SkodaFactory
      * @throws Exception
      *
      */
-    public function make(string $model, string $color, string $option): Car
+    public function makeCar(string $model, string $color, string $option): Car
     {
         return match ($model) {
             'Octavia' => new SkodaCar('Octavia', $color, $option),
-            'Rapid' => new SkodaCar('Rapid', $color, $option),
             'Kodiaq' => new SkodaCar('Kodiaq', $color, $option),
             default => throw new \Exception('invalid car model'),
+        };
+    }
+
+    public function makeSparePartsKit(string $model): SparePartsKit
+    {
+        return match ($model) {
+            'Octavia' => new SkodaSparePartsKit('Octavia'),
+            'Kodiaq' => new SkodaSparePartsKit('Kodiaq'),
+            default => new SkodaSparePartsKit('General Skoda Models'),
         };
     }
 }

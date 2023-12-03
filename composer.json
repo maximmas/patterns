@@ -3,8 +3,7 @@
     "description": "Design patterns examples",
     "autoload": {
         "psr-4": {
-            "Maxim\\Patterns\\": "src/",
-            "Maxim\\Patterns\\FactoryMethod\\": "src/FactoryMethod"
+            "Patterns\\": "src/"
         }
     },
     "authors": [

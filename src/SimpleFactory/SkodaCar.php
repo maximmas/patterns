@@ -1,11 +1,15 @@
 <?php
 
+namespace Patterns\SimpleFactory;
+
 class SkodaCar implements Car
 {
 
-
-    public function __construct(private string $model, private string $color, private string $option)
-    {
+    public function __construct(
+        private string $model,
+        private string $color,
+        private string $option
+    ) {
     }
 
     public function getModel(): string
@@ -13,14 +17,12 @@ class SkodaCar implements Car
         return $this->model;
     }
 
-
-    public function getColor()
+    public function getColor(): string
     {
         return $this->color;
     }
 
-
-    public function getOption()
+    public function getOptionName(): string
     {
         return $this->option;
     }

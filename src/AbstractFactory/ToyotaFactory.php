@@ -1,8 +1,8 @@
 <?php
 
-namespace Patterns\SimpleFactory;
+namespace Patterns\AbstractFactory;
 
-class ToyotaFactory
+class ToyotaFactory extends Factory
 {
 
     /**
@@ -15,7 +15,7 @@ class ToyotaFactory
      * @throws Exception
      *
      */
-    public function make(string $model, string $color, string $option): Car
+    public function makeCar(string $model, string $color, string $option): Car
     {
         return match ($model) {
             'Camry' => new ToyotaCar('Camry', $color, $option),
@@ -23,6 +23,15 @@ class ToyotaFactory
             'Hilux' => new ToyotaCar('Hilux', $color, $option),
             default => throw new \Exception('invalid car model'),
         };
+    }
 
+    public function makeSparePartsKit(string $model): SparePartsKit
+    {
+        return match ($model) {
+            'Camry' => new ToyotaSparePartsKit('Camry'),
+            'Corolla' => new ToyotaSparePartsKit('Corolla'),
+            'Hilux' => new ToyotaSparePartsKit('Hilux'),
+             default => new ToyotaSparePartsKit('General Toyota Models'),
+        };
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace Patterns\SimpleFactory;
+namespace Patterns\AbstractFactory;
 
 interface Car
 {
@@ -8,10 +8,18 @@ interface Car
     /**
      * Модель автомобиля
      *
-     * @return mixed
+     * @return string
      *
      */
     public function getModel(): string;
+
+    /**
+     * Номер VIN
+     *
+     * @return string
+     *
+     */
+    public function getVIN(): string;
 
     /**
      * Цвет автомобиля
