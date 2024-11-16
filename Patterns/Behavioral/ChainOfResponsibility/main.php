@@ -1,7 +1,7 @@
 <?php
 
 
-$rawRequest = new Request();
+$rawRequest = new FormData();
 
 $middleware1 = new RequestHandler();
 $middleware2 = new RequestHandler();

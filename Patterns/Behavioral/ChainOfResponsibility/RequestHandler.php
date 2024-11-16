@@ -10,7 +10,7 @@ class RequestHandler implements Middleware
     }
 
 
-    public function handle(Request $request)
+    public function handle(FormData $request)
     {
         // do smth
         return $this->next->handle($request);
