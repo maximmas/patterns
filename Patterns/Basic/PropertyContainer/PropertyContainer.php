@@ -1,16 +1,11 @@
 <?php
 
-require_once "PropertyContainerInterface.php";
-
-
 class PropertyContainer implements PropertyContainerInterface
 {
 
     /**
      * Ассоциативный массив свойств, имя->значение
-     *
      * @var array
-     *
      */
     protected array $properties;
 
@@ -39,6 +34,7 @@ class PropertyContainer implements PropertyContainerInterface
     {
         return $this->properties[$name] ?? null;
     }
+
 
     /**
      * Удаление свойства

@@ -1,6 +1,8 @@
 <?php
 
-require_once "Product.php";
+require_once __DIR__ . "/PropertyContainerInterface.php";
+require_once __DIR__ . "/PropertyContainer.php";
+require_once __DIR__ . "/Product.php";
 
 $product = new Product;
 
