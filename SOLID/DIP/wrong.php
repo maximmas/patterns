@@ -5,7 +5,7 @@
 
 class Event
 {
-    public function __construct(private \FileLogger $logger)
+    public function __construct(private FileLogger $logger)
     {
     }
 
